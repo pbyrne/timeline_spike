@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @entry.user_id %>
+</p>
+
+<p>
+  <strong>Action type:</strong>
+  <%= @entry.action_type %>
+</p>
+
+<p>
+  <strong>Happened at:</strong>
+  <%= @entry.happened_at %>
+</p>
+
+<p>
+  <strong>Metadata:</strong>
+  <%= @entry.metadata %>
+</p>
+
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>
