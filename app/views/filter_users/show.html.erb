@@ -1,9 +1,3 @@
 <h1>Entries for <%= @user_id %></h1>
 
-<ol>
-  <% @entries.each do |entry| -%>
-    <li>
-      <%= render entry %>
-    </li>
-  <% end -%>
-</ol>
+<%= render "entries/ordered_entries", entries: @entries %>
