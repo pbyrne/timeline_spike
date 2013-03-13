@@ -1,0 +1,12 @@
+<h1>Users</h1>
+
+<ul>
+  <% @user_ids.each do |user_id| -%>
+    <li>
+      <%= link_to user_id, action: :show, id: user_id %>
+    </li>
+  <% end -%>
+</ul>
+
+
+

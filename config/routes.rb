@@ -1,4 +1,5 @@
 TimelineSpike::Application.routes.draw do
+  resources :filter_users
   resources :entries
 
   root "entries#index"

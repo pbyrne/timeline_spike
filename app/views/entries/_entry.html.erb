@@ -1,0 +1,11 @@
+<h3>performed <%= entry.action_type %></h3>
+
+<p><%= entry.happened_at.to_s(:long) %></p>
+
+<% if entry.metadata.any? -%>
+  <ul>
+  <% entry.metadata.each do |key, value| -%>
+    <li><%= key %> &rArr; <%= value %></li>
+  <% end -%>
+  </ul>
+<% end -%>
