@@ -31,7 +31,7 @@ end
 1000.times do
   action_type = action_types.sample
   user_id = user_ids.sample
-  happened_at = rand(1000).minutes.ago
+  happened_at = rand(500000).minutes.ago
 
   Entry.create!({
     user_id: user_id,
