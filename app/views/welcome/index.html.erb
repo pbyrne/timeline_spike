@@ -13,3 +13,4 @@
   <li><%= link_to "View by user", filter_users_path %>: View the users in the system, and view recent entries from any user (<%= link_to "as HTML", filter_user_path(id: 123) %> or <%= link_to "as JSON", filter_user_path(id: 123, format: :json) %>)</li>
   <li><%= link_to "View by action type", filter_actions_path %>: View the actions in the system, and view recent entries for any action (<%= link_to "as HTML", filter_action_path(id: "game-score") %> or <%= link_to "as JSON", filter_action_path(id: "game-score", format: :json) %>)</li>
 </ul>
+
