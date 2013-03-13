@@ -1,8 +1,10 @@
 class Entry < ActiveRecord::Base
-  default_scope order("happened_at desc")
   scope :user_ids, select(:user_id).uniq
   scope :action_types, select(:action_type).uniq
-  scope :recent, order("happened_at desc").limit(40)
+
+  def self.recent(limit=50)
+    order("happened_at desc").limit(limit)
+  end
 
   def self.by_user(user_id)
     where(user_id: user_id)
