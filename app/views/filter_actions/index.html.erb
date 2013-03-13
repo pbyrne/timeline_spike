@@ -1,0 +1,12 @@
+<h1>Actions</h1>
+
+<ul>
+  <% @action_names.each do |action_name| -%>
+    <li>
+      <%= link_to action_name, action: :show, id: action_name %>
+    </li>
+  <% end -%>
+</ul>
+
+
+
