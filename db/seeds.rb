@@ -21,8 +21,12 @@ action_types = %w(
 
 def metadata(action_type)
   case action_type
-  when /page/, /game/, /news-article/
+  when /page/
     {id: rand(1000)}
+  when /news-article/
+    {id: rand(1000), author_id: rand(100)}
+  when /game/
+    {id: rand(1000), home_team_id: rand(1000), away_team_id: rand(1000)}
   else
     {}
   end
