@@ -1,0 +1,40 @@
+%h1
+  Welcome to Timeline!
+
+%p
+  This is a quick spike on the idea of a service which receives, and then lets
+  you slice by user and type, information about actions which occur in
+  your application.
+
+%h2
+  Take a Look
+
+%ul
+  %li
+    = link_to "Firehose", entries_path
+    (
+    = link_to "or as JSON", entries_path(format: :json)
+    ): View the full list of entries in the system.
+  %li
+    = link_to "View by user", filter_users_path
+    (
+    = link_to "or as JSON", filter_users_path(format: :json)
+    ): View the users in the system, and view recent entries from any user
+    = link_to "as HTML", filter_user_path(id: 123)
+    or
+    = link_to "as JSON", filter_user_path(id: 123, format: :json)
+    \.
+  %li
+    = link_to "View by user", filter_actions_path
+    (
+    = link_to "or as JSON", filter_actions_path(format: :json)
+    ): View the actions in the system, and view recent entries for any action
+    = link_to "as HTML", filter_action_path(id: "game-score")
+    or
+    = link_to "as JSON", filter_action_path(id: "game-score", format: :json)
+    \.
+
+%p
+  Feel free to check out the terribly simple code at
+  = link_to "its GitHub project", "https://github.com/pbyrne/timeline_spike"
+  \.
